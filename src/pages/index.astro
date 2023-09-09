@@ -1,0 +1,109 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+
+const colors = {
+	cdi1: "red",
+}
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<h1>Notas de <span class="text-gradient">MEEC @IST</span></h1>
+		<p class="disclaimer">
+			<strong>Disclaimer</strong>: Este site é um projeto pessoal, não
+			afiliado com a administração do Instituto Superior Técnico. Não há
+			qualquer garantia de que a informação aqui presente esteja correta
+			ou atualizada.<br />
+			 Se encontraste algum erro, por favor reporta-o.
+		</p>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="/cdi1"
+				title="Documentation"
+				body="Learn how Astro works and explore the official API docs."
+				color={colors.cdi1}
+			/>
+			<Card
+				href="/integrations/"
+				title="Integrations"
+				body="Supercharge your project with new frameworks and libraries."
+				color="blue"
+			/>
+			<Card
+				href="/themes/"
+				title="Themes"
+				body="Explore a galaxy of community-built starter themes."
+				color="green"
+			/>
+			<Card
+				href="/chat/"
+				title="Community"
+				body="Come say hi to our amazing Discord community. ❤️"
+				color="purple"
+			/>
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.disclaimer {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(
+			rgba(var(--accent-dark), 66%),
+			rgba(var(--accent-dark), 33%)
+		);
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.disclaimer code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.disclaimer strong {
+		color: rgb(var(--accent-light));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>
