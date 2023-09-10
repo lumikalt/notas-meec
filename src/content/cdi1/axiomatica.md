@@ -5,3 +5,7 @@ author: Lumi P.
 ---
 
 # Axiomática
+
+$$
+f(x) = {\dd f \over \dd x}
+$$

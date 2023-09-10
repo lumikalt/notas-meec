@@ -8,4 +8,4 @@ const notas = defineCollection({
     })
 })
 
-export const collections = {  notas }
+export const collections = { notas }

@@ -3,16 +3,20 @@ import { getCollection, type CollectionEntry } from "astro:content";
 import Class from "../../layouts/Class.astro";
 
 export async function getStaticPaths() {
-    const notass = await getCollection("notas");
-    return notass.map((post) => ({
-        params: { slug: post.slug },
-        props: post,
+    const notas = await getCollection("notas");
+    return notas.map((nota) => ({
+        params: {
+            id: nota.id,
+            slug: nota.slug,
+        },
+        props: nota,
     }));
 }
 
 type Props = CollectionEntry<"notas">;
 
 const notas = Astro.props;
+const { disciplina } = Astro.params;
 const { Content } = await notas.render();
 ---
 

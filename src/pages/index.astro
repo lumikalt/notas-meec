@@ -5,6 +5,9 @@ import Footer from "../components/Footer.astro";
 
 const colors = {
 	cdi1: "red",
+	al: "blue",
+	qg: "green",
+	etc: "yellow",
 };
 ---
 
@@ -15,34 +18,14 @@ const colors = {
 			<strong>Disclaimer</strong>: Este site é um projeto pessoal, não
 			afiliado com a administração do Instituto Superior Técnico. Não há
 			qualquer garantia de que a informação aqui presente esteja correta
-			ou atualizada.<br />
-			 Se encontraste algum erro, por favor reporta-o.
+			ou atualizada.
+			<br />Se encontraste algum erro, por favor reporta-o.
 		</p>
 		<ul role="list" class="link-card-grid">
-			<Card
-				href="/disciplinas/1/cdi1"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-				color={colors.cdi1}
-			/>
-			<Card
-				href="/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-				color="blue"
-			/>
-			<Card
-				href="/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-				color="green"
-			/>
-			<Card
-				href="/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-				color="purple"
-			/>
+			<Card href="/notas/cdi1" title="CDI-1" color={colors.cdi1} />
+			<Card href="/notas/al" title="AL" color={colors.al} />
+			<Card href="/notas/qg" title="QG" color={colors.qg} />
+			<Card href="/notas/etc" title="ETC" color={colors.etc} />
 		</ul>
 		<Footer />
 	</main>
