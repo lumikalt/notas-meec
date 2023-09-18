@@ -11,18 +11,6 @@ type Props = CollectionEntry<"disciplinas">["data"];
 </article>
 
 <style is:global>
-    :root {
-        --accent: 136, 58, 234;
-        --accent-light: 224, 204, 250;
-        --accent-dark: 49, 10, 101;
-        --accent-gradient: linear-gradient(
-            45deg,
-            rgb(var(--accent)),
-            rgb(var(--accent-light)) 30%,
-            white 60%
-        );
-    }
-
     body {
         margin: auto;
         padding: 1rem;
@@ -34,10 +22,14 @@ type Props = CollectionEntry<"disciplinas">["data"];
     }
 
     h1 {
-        background-image: var(--accent-gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 400%;
-        background-position: 0%;
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 1em;
+        background-color: linear-gradient(
+            red,
+            white
+        );
     }
 </style>
