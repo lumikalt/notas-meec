@@ -4,7 +4,11 @@ import Card from "../components/Card.astro";
 import Footer from "../components/Footer.astro";
 
 const colors = {
-	cdi1: "red",
+	// Three shades of red of increasing strength for calculus 1, 2 and 3
+	cdi1: "#ff0000",
+	cdi2: "#cc0000",
+	cdi3: "#990000",
+
 	al: "blue",
 	qg: "green",
 	etc: "yellow",
@@ -22,10 +26,10 @@ const colors = {
 			<br />Se encontraste algum erro, por favor reporta-o.
 		</p>
 		<ul role="list" class="link-card-grid">
-			<Card href="/notas/cdi1" title="CDI-1" color={colors.cdi1} />
-			<Card href="/notas/al" title="AL" color={colors.al} />
-			<Card href="/notas/qg" title="QG" color={colors.qg} />
-			<Card href="/notas/etc" title="ETC" color={colors.etc} />
+			<Card href="/cdi1" title="CDI-1" color={colors.cdi1} />
+			<Card href="/cdi2" title="CDI-2" color={colors.cdi2} />
+			<Card href="/cdi3" title="CDI-3" color={colors.cdi3} />
+			<Card href="/al" title="AL" color={colors.al} />
 		</ul>
 		<Footer />
 	</main>
@@ -48,14 +52,6 @@ const colors = {
 		line-height: 1;
 		text-align: center;
 		margin-bottom: 1em;
-	}
-
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
 	}
 
 	.disclaimer {

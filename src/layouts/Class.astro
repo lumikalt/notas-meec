@@ -1,13 +1,43 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import Footer from "../components/Footer.astro";
-import Layout from "./Layout.astro";
 
 type Props = CollectionEntry<"disciplinas">["data"];
-
-const { title } = Astro.props;
 ---
 
-<Layout title={title}>
+<article>
+    <slot />
     <Footer />
-</Layout>
+</article>
+
+<style is:global>
+    :root {
+        --accent: 136, 58, 234;
+        --accent-light: 224, 204, 250;
+        --accent-dark: 49, 10, 101;
+        --accent-gradient: linear-gradient(
+            45deg,
+            rgb(var(--accent)),
+            rgb(var(--accent-light)) 30%,
+            white 60%
+        );
+    }
+
+    body {
+        margin: auto;
+        padding: 1rem;
+        width: 800px;
+        max-width: calc(100% - 2rem);
+        color: white;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+
+    h1 {
+        background-image: var(--accent-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 400%;
+        background-position: 0%;
+    }
+</style>

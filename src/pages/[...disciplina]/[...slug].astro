@@ -1,6 +1,7 @@
 ---
 import { getCollection, type CollectionEntry } from "astro:content";
 import Class from "../../layouts/Class.astro";
+import Layout from "../../layouts/Layout.astro";
 
 export async function getStaticPaths() {
     const notas = await getCollection("disciplinas");
@@ -19,6 +20,11 @@ const notas = Astro.props;
 const { Content } = await notas.render();
 ---
 
-<Class {...notas.data}>
-    <Content />
-</Class>
+<Layout
+    title={notas.data.name}
+    description=`${notas.data.name}: ${notas.data.cadeira}`
+>
+    <Class {...notas.data}>
+        <Content />
+    </Class>
+</Layout>

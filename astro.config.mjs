@@ -3,16 +3,21 @@ import mdx from "@astrojs/mdx"
 import rehypeMahJax from "rehype-mathjax"
 import remarkMath from "remark-math"
 import sitemap from "@astrojs/sitemap"
+import remarkToc from "remark-toc"
 
 // https://astro.build/config
 export default defineConfig({
     site: "https://lumikalt.vercel.app",
     sitemap: true,
-    plugins: {
-        integrations: [mdx(), sitemap()],
-        markdown: {
-            remarkPlugins: [remarkMath],
-            rehypePlugins: [rehypeMahJax]
-        }
+    integrations: [mdx(), sitemap()],
+    markdown: {
+        remarkPlugins: [remarkMath, remarkToc],
+        rehypePlugins: [[
+            rehypeMahJax,
+            {
+                loader: { load: ["[tex]/physics"] },
+                tex: { packages: { "[+]": ["physics"] } }
+            }
+        ]]
     }
 });
