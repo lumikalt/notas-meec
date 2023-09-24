@@ -13,8 +13,8 @@
     "@astrojs/mdx": "latest",
     "@astrojs/sitemap": "latest",
     "astro": "latest",
-    "rehype-mathjax": "latest",
+    "rehype-mathjax": "4.0.3",
     "remark-math": "latest",
-    "remark-toc": "^8.0.1"
+    "remark-toc": "latest"
   }
 }

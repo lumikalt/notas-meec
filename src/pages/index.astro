@@ -25,6 +25,10 @@ const colors = {
 			ou atualizada.
 			<br />Se encontraste algum erro, por favor reporta-o.
 		</p>
+
+		<span class="divider" />
+
+		<div class="year">1º ano</div>
 		<ul role="list" class="link-card-grid">
 			<Card href="/cdi1" title="CDI-1" color={colors.cdi1} />
 			<Card href="/cdi2" title="CDI-2" color={colors.cdi2} />
@@ -75,6 +79,19 @@ const colors = {
 		strong {
 			color: rgb(var(--accent-light));
 		}
+	}
+
+	.divider {
+		display: inline-block;
+        width: 800px;
+        max-width: calc(100% - 2rem);
+		height: 0px;
+		border-style: dotted;
+	}
+
+	.year {
+		text-align: center;
+		margin: auto;
 	}
 
 	.link-card-grid {

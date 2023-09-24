@@ -7,8 +7,8 @@ author: Lumi P.
 # Álgebra Linear
 
 $$
-\begin{matrix}
+\begin{bmatrix}
     1 & 2 & 3 \\
     4 & 5 & 6
-\end{matrix}
+\end{bmatrix}
 $$
