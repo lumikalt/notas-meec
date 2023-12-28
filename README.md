@@ -1,9 +1,9 @@
 # Notas MEEC
 
-Espaço para manter as minhas notas para o curso LEEC21, e MEEC no futuro.
+Espaço para manter as minhas notas para MEEC.
 
 ---
 
-## Notas:
+## Notas Técnicas
 
-- h6 (######) são a maneira de ter um "callout". Chato, mas não quero de ter de escrever um plugin de rehype.
+Há suporte para certas funções do programa *Obsidian*.
