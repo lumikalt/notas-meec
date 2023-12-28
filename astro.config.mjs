@@ -7,7 +7,7 @@ import remarkToc from "remark-toc"
 
 // https://astro.build/config
 export default defineConfig({
-    site: "https://lumikalt.vercel.app",
+    site: "https://todo.com",
     sitemap: true,
     integrations: [mdx(), sitemap()],
     markdown: {
